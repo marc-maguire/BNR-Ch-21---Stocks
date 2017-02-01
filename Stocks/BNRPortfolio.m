@@ -10,6 +10,13 @@
 #import "BNRPortfolio.h"
 #import "BNRForeignStockHolding.h"
 
+@interface BNRPortfolio()
+{
+    NSMutableArray *_challengeStocks;
+}
+
+@end
+
 @implementation BNRPortfolio
 
 
@@ -29,6 +36,15 @@
     
     [_challengeStocks addObject:s];
 }// you check to see if challengeStocks has been initialized, if not, initialized, and then regardless, add the stock to it, which has the internal var of s from the function
+
+- (void)removeStocks:(BNRStockHolding *)s
+{
+    if (_challengeStocks) {
+        [_challengeStocks removeObject:s];
+    } else {
+        NSLog(@"There are no more stocks");
+    }
+}
 
 
 - (float)currentPortfolioValue

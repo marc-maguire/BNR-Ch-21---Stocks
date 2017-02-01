@@ -43,6 +43,7 @@ int main(int argc, const char * argv[]) {
         [myPortfolio setChallengeStocks:HIJ];
         [myPortfolio setChallengeStocks:KLM];
         
+        
         NSLog(@"The current portfolio value is %.2f.\n", myPortfolio.currentPortfolioValue);
         
         

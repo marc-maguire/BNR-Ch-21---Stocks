@@ -9,11 +9,10 @@
 #import "BNRStockHolding.h"
 
 @interface BNRPortfolio: NSObject
-{
-    NSMutableArray *_challengeStocks;
-}
+
 - (float)currentPortfolioValue;
 - (void)setChallengeStocks:(BNRStockHolding *)s;
+- (void)removeStocks:(BNRStockHolding *)s;
 
 @end
 
